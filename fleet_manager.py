@@ -31,6 +31,7 @@ def main():
         elif option == "2":
             add_members()
         elif option =="3":
+            remove_member()
 
  def add_members():
         all_ranks = ["Captain","Commander","Lt. Commander","Lieutenant","Lt. junior","Ensign"]
@@ -60,8 +61,21 @@ def main():
             else:
                 print("That rank doesnt exist please try again. ")
             
-        
+ def remove_member ():
+     
+     rem_id = input("id of profile to remove: ")
 
+     if rem_id in IDs : 
+        pos = IDs.index(rem_id)
+
+        print_name = names[pos]
+        names.pop(pos)
+        ranks.pop(pos)
+        divisions.pop(pos)
+        IDs.pop(pos)
+
+        print(f"Removed {print_name}")
+        display_menu()
 
 
  display_menu()
