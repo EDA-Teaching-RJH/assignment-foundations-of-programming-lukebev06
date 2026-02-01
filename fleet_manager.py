@@ -1,5 +1,6 @@
 
 def main():
+ name = input("what is your full name: ")
 
  names = ["Picard","Spock","Geordi","Kathryn","Riker"]
  ranks = ["Captain","Commander","Lt. commander","Captain","Commander"]
@@ -17,7 +18,7 @@ def main():
         print(f"{names[i]} - {ranks[i]} - {divisions[i]} - {IDs[i]}")
 
  def display_menu():
-        name = input("what is your full name: ")
+        
         print(f"\n--- MENU --- {name} ---")
         print("1. View Crew")
         print("2. Add Crew")
@@ -29,6 +30,7 @@ def main():
             init_database()
         elif option == "2":
             add_members()
+        elif option =="3":
 
  def add_members():
         all_ranks = ["Captain","Commander","Lt. Commander","Lieutenant","Lt. junior","Ensign"]
@@ -44,8 +46,8 @@ def main():
             print("Captain ,Commander ,Lt. Commander ,Lieutenant ,Lt. junior ,Ensign")
             new_rank = input("Rank:")
 
-            if all_ranks.index(new_rank,0) >=0: 
-                if IDs.index(new_id,0) >=0:
+            if new_rank in all_ranks: 
+                if new_id in IDs:
                     print("that id already exists please try again. ")
 
                 else:
@@ -54,11 +56,12 @@ def main():
                     divisions.append(new_division)
                     IDs.append(new_id)
                     n = 1
+                    display_menu()
             else:
                 print("That rank doesnt exist please try again. ")
             
         
-        #if .index cant find result it gives error
+
 
 
  display_menu()
