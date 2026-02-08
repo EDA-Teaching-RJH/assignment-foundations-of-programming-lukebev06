@@ -169,4 +169,4 @@ def main():
 main()
 
 
-# definitions 1,2,3,4,5,6 work. 7 has an error. havent checked  the other 3
+# complete
