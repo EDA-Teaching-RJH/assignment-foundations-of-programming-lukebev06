@@ -127,17 +127,17 @@ def main():
      display_menu(names,ranks,divisions,IDs)
     
  def filter_by_divisions(names, divisions):
-     print("Command, Operations, Sciences")
+     print("Command, Operations, Science")
      div = input("please enter a division in the list above: ")
      
-     for i in range(len(name)):
+     for i in range(len(names)):
          
          if div == divisions[i]:
             print(f"{names[i]} is in {div}")
-     display_menu(names,divisions)
+     display_menu(names, ranks, divisions, IDs)
          
  def calculate_payroll(ranks):
-     total_pay = 0
+     total = 0
      for i in range(len(ranks)):
          if ranks[i] == "Captain" :
              total = total + 600
@@ -164,7 +164,7 @@ def main():
 
          
 
- display_menu(names,ranks,divisions,IDs)
+ display_menu(names, ranks, divisions, IDs)
 main()
 
 
