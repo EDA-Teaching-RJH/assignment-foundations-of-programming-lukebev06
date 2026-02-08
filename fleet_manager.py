@@ -151,16 +151,17 @@ def main():
              total = total + 200
          elif ranks[i] == "Ensign":
              total = total + 100
-     display_menu(ranks)
+     print(f"the total payroll is {total}")
+     display_menu(names, ranks, divisions, IDs)
 
  def count_officers(ranks):
      total_command = 0
-     for i in range[len(ranks)]:
+     for i in range(len(ranks)):
          if ranks[i] == "Captain" or ranks[i] == "Commander":
              total_command = total_command + 1
      print(f"There are {total_command} in command.")
     
-     display_menu(ranks)
+     display_menu(names, ranks, divisions, IDs)
 
          
 
