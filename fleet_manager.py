@@ -51,8 +51,10 @@ def main():
         elif option =="9":
             count_officers(ranks)
         elif option =="10":
-            print("Shutting Down......")
             break
+        else:
+            print("that is not a valid menu option.")
+            display_menu(names,ranks,divisions,IDs)
 
  def add_members(names,ranks,divisions,IDs):
         
@@ -162,8 +164,6 @@ def main():
      print(f"There are {total_command} in command.")
     
      display_menu(names, ranks, divisions, IDs)
-
-         
 
  display_menu(names, ranks, divisions, IDs)
 main()
